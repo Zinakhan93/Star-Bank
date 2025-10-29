@@ -1,4 +1,4 @@
-package com.Star_Bank.Star_Bank;
+package com.Star_Bank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
