@@ -1,4 +1,4 @@
-package com.Star_Bank.Star_Bank;
+package com.Star_Bank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class StarBankApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(StarBankApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(StarBankApplication.class, args);
+    }
 
 }
