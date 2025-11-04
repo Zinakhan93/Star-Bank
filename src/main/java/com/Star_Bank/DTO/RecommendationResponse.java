@@ -9,11 +9,11 @@ public class RecommendationResponse {
     @JsonProperty("user_id")
     private UUID userId;
 
-    private List<RecommendationDto> recommendations;
+    private List<Recommendation> recommendations;
 
     public RecommendationResponse() {}
 
-    public RecommendationResponse(UUID userId, List<RecommendationDto> recommendations) {
+    public RecommendationResponse(UUID userId, List<Recommendation> recommendations) {
         this.userId = userId;
         this.recommendations = recommendations;
     }
@@ -22,8 +22,8 @@ public class RecommendationResponse {
     public UUID getUserId() { return userId; }
     public void setUserId(UUID userId) { this.userId = userId; }
 
-    public List<RecommendationDto> getRecommendations() { return recommendations; }
-    public void setRecommendations(List<RecommendationDto> recommendations) {
+    public List<Recommendation> getRecommendations() { return recommendations; }
+    public void setRecommendations(List<Recommendation> recommendations) {
         this.recommendations = recommendations;
     }
 }
