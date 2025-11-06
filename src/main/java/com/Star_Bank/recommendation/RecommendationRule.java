@@ -1,6 +1,6 @@
 package com.Star_Bank.recommendation;
 
-import com.Star_Bank.DTO.Recommendation;
+import com.Star_Bank.model.Recommendation;
 
 import java.util.Optional;
 import java.util.UUID;

@@ -1,43 +1,28 @@
-package com.Star_Bank.DTO;
+package com.Star_Bank.model;
 import java.util.Objects;
 import java.util.UUID;
 
 public class Recommendation {
     private String name;
-    private UUID id;
+    private String id;
     private String text;
 
     public Recommendation() {}
 
-    public Recommendation(String name, UUID id, String text) {
+    public Recommendation(String name, String id, String text) {
         this.name = name;
         this.id = id;
         this.text = text;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
+    public String getText() { return text; }
+    public void setText(String text) { this.text = text; }
 
     @Override
     public boolean equals(Object o) {
@@ -53,9 +38,9 @@ public class Recommendation {
 
     @Override
     public String toString() {
-        return "RecommendationDto{" +
+        return "Recommendation{" +
                 "name='" + name + '\'' +
-                ", id=" + id +
+                ", id='" + id + '\'' +
                 ", text='" + text + '\'' +
                 '}';
     }
