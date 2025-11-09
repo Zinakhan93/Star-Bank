@@ -1,7 +1,6 @@
 package com.Star_Bank.model;
 
 
-import com.Star_Bank.DTO.Recommendation;
 import com.Star_Bank.repository.RecommendationRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

@@ -1,7 +1,10 @@
 package com.Star_Bank.model;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 
+import java.security.Timestamp;
 import java.util.UUID;
 /*Модель динамического правила рекомендаций для хранения в БД
  * Содержит информацию о продукте и набор запросов для проверки условий
@@ -29,7 +32,14 @@ public class DynamicRule {
     @Column(name = "rule_queries", columnDefinition = "TEXT")
     private String ruleQueries;
 
-    // Конструкторы
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
+    private Timestamp createdAt;
+
+    @UpdateTimestamp
+    @Column(name = "updated_at")
+    private Timestamp updatedAt;
+
     public DynamicRule() {}
 
     public DynamicRule(String productName, String productId, String productText, String ruleQueries) {
@@ -39,7 +49,6 @@ public class DynamicRule {
         this.ruleQueries = ruleQueries;
     }
 
-    // Геттеры и сеттеры
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
 
@@ -54,4 +63,10 @@ public class DynamicRule {
 
     public String getRuleQueries() { return ruleQueries; }
     public void setRuleQueries(String ruleQueries) { this.ruleQueries = ruleQueries; }
+
+    public Timestamp getCreatedAt() { return createdAt; }
+    public void setCreatedAt(Timestamp createdAt) { this.createdAt = createdAt; }
+
+    public Timestamp getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(Timestamp updatedAt) { this.updatedAt = updatedAt; }
 }
